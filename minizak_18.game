@@ -1,0 +1,92 @@
+[world:Il mondo di Zak]
+description	Benvenuto nel mondo in cui si svolgono le avventure di Zak!
+start	stanza di Zak
+
+[room:stanza di Zak]
+description	la camera da letto di Zak
+objects	scrivania
+links	E:salone di Zak,S:stanza segreta
+
+[room:salone di Zak]
+description	il salone di Zak
+objects	salvadanaio
+characters	bob
+links	O:stanza di Zak,S:porta ingresso,N:porta ripostiglio
+
+[room:ripostiglio]
+description	ripostiglio nella casa di Zak
+objects	martello
+links	S:porta ripostiglio
+
+[room:fuori casa]
+description	spazio fuori casa di Zak dove si trova la fermata del bus
+objects	pozzo
+links	N:porta ingresso,O:navetta
+
+[room:negozietto]
+description	negozio di ferramenta
+objects	secchio
+characters	Tom
+links	E:navetta
+
+[room:stanza segreta]
+description	stanza super segreta sotto la casa di Zak
+links	N:stanza di Zak,O:grande porta,E:piccola stanza misteriosa
+
+[room:stanza cobalto]
+description	stanza che contiene una gemma blu
+objects	gemma blu
+links	E:grande porta
+
+[room:piccola stanza misteriosa]
+description	una piccola stanza vuota e misteriosa
+links	N:stanza rosso fuoco,O:stanza segreta
+
+[room:stanza rosso fuoco]
+description	stanza di colore rosso fuoco
+objects	cassetto
+links	E:stanza blu verde,S:piccola stanza misteriosa
+
+[room:stanza blu verde]
+description	stanza in cui ci si trova uno strano gatto
+characters	neo
+links	N:porta blu,S:stanza del tesoro,O:stanza rosso fuoco
+
+[room:stanza smeraldo]
+description	stanza di colore smeraldo
+characters
+links	S:porta blu
+
+[room:stanza del tesoro]
+description	stanza in cui si trova finalmente il grande tesoro
+objects	tesoro
+links	N:stanza blu verde 
+
+
+[links]
+porta ingresso	Porta	salone di Zak	fuori casa
+porta ripostiglio	Porta	salone di Zak	ripostiglio
+navetta	Bus	fuori casa	negozietto
+grande porta	Porta	stanza segreta	stanza cobalto
+porta blu	Porta	stanza blu verde	stanza smeraldo
+
+[objects]
+scrivania	Scrivania	chiave
+chiave	Chiave	porta ripostiglio
+salvadanaio	Salvadanaio	soldi
+soldi	Soldi
+martello	Martello
+pozzo	Pozzo
+secchio	Secchio // inizialmente vuoto
+gemma blu	Chiave	porta blu
+grande chiave	Chiave	grande porta
+cassetto	Cassetto	grande chiave
+tesoro	Tesoro
+
+[characters]
+bob	Cane
+Tom	Venditore	secchio
+neo	Gatto
+
+[player]
+Zak	Giocatore

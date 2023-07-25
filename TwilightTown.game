@@ -1,0 +1,86 @@
+[world:Twilight Town]
+description	Twilight Town è una città tranquilla in un tramonto infinito. Luogo di nascita di Roxas, dove vivremo le sue avventure.
+start	Usual Spot
+
+[room:Usual Spot]
+description	Il nascondiglio
+characters Pence, Olette
+links	E:Back Alley
+
+[room:Back Alley]
+description	La stradina che porta al nascondiglio.
+links	N:Station Heights,O:Usual Spot,S:Sandlot
+
+[room:Station Heights]
+description	La strada del mercato è una strada lunga tortuosa e in forte pendenza che porta dalle zone basse della città alla Stazione Centrale.
+links	O:Back Alley,S:Sandlot,N:Station Plaza,E:Tram Common
+
+[room:Station Plaza]
+description	Una grande area aperta coperta dalla caratteristica Torre dell'Orologio della città che sebbene abbia un orologio di dodici ore ha "I" in cima invece di "XII".
+characters	Moguri
+objects	biglietto
+links	S:Station Heights,N:Central Station
+
+[room:Central Station]
+description	Una grande stazione ferroviaria che conduce in tutto il mondo compresi altri quartieri della città.
+links	S:Station Heights,O:treno,E:teletrasporto
+
+[room:Sunset Station]
+description	Stazione di un altro quartiere della città
+links	E:treno,O:Sunset Terrace
+
+[room:Sunset Terrace]
+description	Una terrazza dove si può ammirare un tramonto eterno. In lontananza c'è una torre misteriosa.
+objects	chiave vecchia
+links	E:Sunset Station
+
+[room:Sandlot]
+description	L'area in cui si svolgono le famigerate battaglie di Struggle.
+objects	soldi
+characters	Setzer
+links	N:Station Heights,O:Back Alley,E:Tram Common
+
+[room:Tram Common]
+description	Un'area di mercato aperto con un tram gratuito che gira intorno. Qui si trovano molti negozi tra cui il negozio di accessori e il negozio di armature. Sembra essere anche la posizione di molte case.
+objects	spada
+characters	Hayner
+links	O:Station Heights,E:Woods,S:Sandlot
+
+[room:Woods]
+description	Una foresta oltre i limiti della citta dove condurra?
+links	O:Tram Common,N:portone
+
+[room:Mansion]
+description	Una vecchia magione abbandonata
+objects	scrivania
+links	S:portone
+
+[room:Tower]
+description	È raggiungibile solo con il Treno Magico che appare nella Stazione Centrale. Poco si sa di questa zona, a parte che Yen Sid la scelse per costruire la sua torre e per addestrare Re Topolino.
+objects	keyblade
+characters	YenSid
+
+[links]
+treno	Treno	Central Station	Sunset Station
+portone	Porta	Woods	Mansion
+teletrasporto	Teletrasporto	Central Station	Tower
+
+[objects]
+scrivania	Scrivania	chiave teletrasporto
+keyblade	Tesoro
+spada	Spada
+biglietto	Chiave	treno
+chiave teletrasporto	Chiave	teletrasporto
+soldi	Soldi
+chiave vecchia	Chiave	portone
+
+[characters]
+Hayner	Amico	spada
+Pence	Personaggio
+Olette	Personaggio
+Setzer	Nemico	soldi
+Moguri	Venditore	biglietto
+YenSid	Guardiano	keyblade	spada
+
+[player]
+Roxas	Giocatore

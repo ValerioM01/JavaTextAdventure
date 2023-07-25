@@ -1,0 +1,12 @@
+guarda // descrivera' la stanza e quello che vede dentro la stanza
+vai S // vai nella stanza segreta
+guarda
+vai E // entra nella piccola stanza misteriosa
+guarda
+vai N // entra nella stanza rosso fuoco
+guarda
+vai E // entra nella stanza blu verde
+guarda
+vai S // vai nella stanza del tesoro
+guarda
+prendi tesoro // prendi il tesoro = finisce il gioco vincendo
